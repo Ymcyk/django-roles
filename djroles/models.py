@@ -62,5 +62,5 @@ class Role(models.Model):
             raise RoleError('This user has role')
         ref_user.groups.add(self.group)
 
-from drf_roles import signals
+from djroles import signals
 
