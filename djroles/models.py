@@ -58,7 +58,7 @@ class Role(models.Model):
         # wywołanie po sobie give_user będzie zwracać to samo.
         # Tym sposobem możliwe by było nadanie dwóch różnych grup
         ref_user = User.objects.get(id=user.id)        
-        if ref_user.has_perm('drf_roles.has_role'):
+        if ref_user.has_perm('djroles.has_role'):
             raise RoleError('This user has role')
         ref_user.groups.add(self.group)
 
