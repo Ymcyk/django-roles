@@ -126,7 +126,7 @@ class RoleTest(TestCase):
         # do
         role.give_role(user)
         # check
-        self.assertTrue(user.has_perm('drf_roles.has_role'))
+        self.assertTrue(user.has_perm('djroles.has_role'))
 
     def test_user_dont_have_role_permissions_after_role_delete(self):
         # prepare
